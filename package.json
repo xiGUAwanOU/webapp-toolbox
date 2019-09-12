@@ -1,0 +1,19 @@
+{
+  "name": "webapp-toolbox",
+  "version": "1.0.0",
+  "description": "A set of utilities to help implement Node.js based web application.",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiGUAwanOU/webapp-toolbox.git"
+  },
+  "author": "Zihan Lin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiGUAwanOU/webapp-toolbox/issues"
+  },
+  "homepage": "https://github.com/xiGUAwanOU/webapp-toolbox#readme"
+}
