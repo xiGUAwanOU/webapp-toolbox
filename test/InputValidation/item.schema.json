@@ -1,0 +1,22 @@
+{
+  "$id": "http://jacob.de/test/item.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Dummy JSON schema for unit test",
+  "type": "object",
+  "properties": {
+    "numberField": {
+      "type": "integer",
+      "multipleOf": 2
+    },
+    "stringField": {
+      "type": "string",
+      "enum": [
+        "foo",
+        "bar"
+      ]
+    }
+  },
+  "required": [
+    "numberField"
+  ]
+}
