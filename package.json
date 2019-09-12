@@ -15,5 +15,24 @@
   "bugs": {
     "url": "https://github.com/xiGUAwanOU/webapp-toolbox/issues"
   },
-  "homepage": "https://github.com/xiGUAwanOU/webapp-toolbox#readme"
+  "homepage": "https://github.com/xiGUAwanOU/webapp-toolbox#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.5",
+    "@types/supertest": "^2.0.8",
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@types/basic-auth": "^1.1.2",
+    "ajv": "^6.10.2",
+    "basic-auth": "^2.0.1"
+  },
+  "peerDependencies": {
+    "@types/express": "^4.17.1",
+    "express": "^4.17.1"
+  }
 }

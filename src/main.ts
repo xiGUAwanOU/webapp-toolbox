@@ -1,0 +1,1 @@
+throw new Error('Never import package directly! Instead, import sub-packages separately.');
