@@ -1,2 +1,2 @@
-# Typescript WebApp Toolbox
-A set of utilities to help implement TypeScript based web application.
+# WebApp Toolbox
+A set of utilities to help implement Node.js based web application.
