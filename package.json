@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "A set of utilities to help implement Node.js based web application.",
   "main": "dist/main.js",
+  "types": "dist/main.d.ts",
   "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf dist",
+    "install": "npm run build",
+    "lint": "tslint -c tslint.json src/**/*.ts test/**/*.ts",
     "test": "jest"
   },
   "repository": {
