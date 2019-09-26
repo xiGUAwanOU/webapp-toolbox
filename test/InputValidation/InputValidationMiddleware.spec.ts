@@ -21,7 +21,7 @@ describe("BasicAuthValidator", () => {
     });
   });
 
-  it("does nothing if user input is valid", async () => {
+  it("forwards the request to the next handler", async () => {
     const response = await request(server)
       .post("/resource")
       .send({ numberField: 42 });
@@ -29,21 +29,12 @@ describe("BasicAuthValidator", () => {
     expect(response.status).toEqual(204);
   });
 
-  it("throws an error if there is a missing root field", async () => {
+  it("returns 400 if there is an input validation error", async () => {
     const response = await request(server)
       .post("/resource")
       .send({ stringField: "foo" });
 
     expect(response.status).toEqual(400);
     expect(response.body.message).toEqual("Object should have required property 'numberField'");
-  });
-
-  it("throws an error if there is an invalid field value", async () => {
-    const response = await request(server)
-      .post("/resource")
-      .send({ numberField: "foo" });
-
-    expect(response.status).toEqual(400);
-    expect(response.body.message).toEqual("Field \".numberField\" should be integer");
   });
 });
