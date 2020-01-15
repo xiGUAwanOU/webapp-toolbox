@@ -1,10 +1,10 @@
-import InputValidator from "../../src/InputValidation/InputValidator";
+import InputValidator from "../../src/Services/InputValidator";
 
 describe("InputValidator", () => {
   let inputValidator: InputValidator;
 
   beforeEach(() => {
-    inputValidator = new InputValidator(require("./item.schema.json"));
+    inputValidator = new InputValidator(require("../Data/item.schema.json"));
   });
 
   it("does nothing if user input is valid", () => {

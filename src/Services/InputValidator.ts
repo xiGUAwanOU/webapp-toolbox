@@ -1,6 +1,6 @@
 import * as Ajv from "ajv";
 
-import InputValidationError from "./InputValidationError";
+import InputValidationError from "../Errors/InputValidationError";
 
 export default class InputValidator {
   private validateFunction: Ajv.ValidateFunction;
