@@ -36,4 +36,26 @@ describe("BasicAuthValidator", () => {
       .send({ stringField: "foo" })
       .expect(400, { error: "Object should have required property 'numberField'" });
   });
+
+  it("allows user to customize the error", async () => {
+    server = express();
+    server.use(bodyParser.json());
+    server.use(
+      new InputValidation()
+        .withJsonSchema(require("../Data/item.schema.json"))
+        .withDataExtractor((req) => req.body)
+        .withErrorCode(401)
+        .withErrorBody(() => ({ error: "Authorization failed" }))
+        .done(),
+    );
+    server.post("/resource", (req, res) => {
+      res.status(204);
+      res.end();
+    });
+
+    await request(server)
+      .post("/resource")
+      .send({ stringField: "foo" })
+      .expect(401, { error: "Authorization failed" });
+  });
 });

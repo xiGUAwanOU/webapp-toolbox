@@ -1,9 +1,11 @@
 import { Handler, Request } from "express";
 
+export type IErrorBodyExtractor = (err: Error, req: Request) => any;
+
 interface IErrorMapper {
   name: string;
   statusCode: number;
-  bodyExtractor?: (err: Error, req: Request) => any;
+  bodyExtractor?: IErrorBodyExtractor;
 }
 
 export default class BusinessLogicAndErrorHandling {
@@ -15,7 +17,7 @@ export default class BusinessLogicAndErrorHandling {
     return this;
   }
 
-  public withErrorMapper(name: string, statusCode: number, bodyExtractor?: (err: Error) => any) {
+  public withErrorMapper(name: string, statusCode: number, bodyExtractor?: IErrorBodyExtractor) {
     this.errorMappers.push({ name, statusCode, bodyExtractor });
     return this;
   }
