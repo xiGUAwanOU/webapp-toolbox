@@ -1,0 +1,1 @@
+{"version":3,"file":"BasicAuthError.js","sourceRoot":"","sources":["../../src/Errors/BasicAuthError.ts"],"names":[],"mappings":";;AAAA,MAAqB,cAAe,SAAQ,KAAK;IAC/C;QACE,KAAK,CAAC,kCAAkC,CAAC,CAAC;QAC1C,IAAI,CAAC,IAAI,GAAG,gBAAgB,CAAC;IAC/B,CAAC;CACF;AALD,iCAKC"}

@@ -7,7 +7,6 @@
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rm -rf dist",
-    "install": "npm run build",
     "lint": "tslint -c tslint.json src/**/*.ts test/**/*.ts",
     "test": "jest"
   },
